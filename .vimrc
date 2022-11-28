@@ -32,6 +32,9 @@ Plug 'ap/vim-buftabline'
 " Completion
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 
+" Cursorline
+Plug 'yamatsum/nvim-cursorline'
+
 call plug#end()
 
 "Theme config
@@ -40,6 +43,21 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 colorscheme tender
 
 let g:lightline = { 'colorscheme': 'solarized' }
+
+lua << EOF
+
+require('nvim-cursorline').setup {
+  cursorline = {
+    enable = true,
+    timeout = 100,
+    number = false,
+  },
+  cursorword = {
+    enable = false,
+  }
+}
+
+EOF
 
 " coc config
 "
