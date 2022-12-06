@@ -7,4 +7,4 @@ require('core.keymaps')
 require('plugins.cursorline-conf')
 require('plugins.lighline-conf')
 require('plugins.coc-config')
-require('plugins.nerdtree-conf')
+require 'plugins.tree-conf'

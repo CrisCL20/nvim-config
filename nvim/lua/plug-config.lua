@@ -39,13 +39,18 @@ return packer.startup(function(use)
   -- IDE
 
   use('easymotion/vim-easymotion')
-  use('preservim/nerdtree')
   use('christoomey/vim-tmux-navigator')
   use('ryanoasis/vim-devicons')
-  use('tiagofumo/vim-nerdtree-syntax-highlight')
   use('itchyny/lightline.vim')
   use('Townk/vim-autoclose')
   use('ap/vim-buftabline')
+  use {
+   'nvim-tree/nvim-tree.lua',
+   requires = {
+     'nvim-tree/nvim-web-devicons', -- optional, for file icons
+   },
+   tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
 
   -- Completion
   use {'neoclide/coc.nvim', branch = 'release'}
